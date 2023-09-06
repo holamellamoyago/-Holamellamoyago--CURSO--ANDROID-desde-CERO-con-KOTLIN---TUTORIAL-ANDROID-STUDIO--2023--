@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".firstApp.CurriculumActivity"
+    android:background="@color/gris"
+    >
+
+    <TextView
+        android:id="@+id/tvBienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivBienvenido"
+
+        android:layout_marginTop="24dp"
+
+        android:text="Bienvenidx a mi \naplicacion."
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="28sp"
+
+        />
+
+    <ImageView
+        android:id="@+id/ivBienvenido"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:layout_marginTop="24dp"
+
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvBienvenido"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:src="@drawable/holamellamoyago"
+        android:background="@drawable/_radius"
+        />
+
+    <TextView
+        android:id="@+id/tvBiografia"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvBienvenido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivBienvenido"
+
+        android:text="Mi nombre es Yago, me gusta el desarollo de APPs. Actualmente estudio Kotlin junto con Jetpack compose aun que dentro de poco tiempo subire proyectos de este."
+        android:textColor="@color/white"
+        android:textSize="12sp"
+
+        android:layout_marginStart="14sp"
+        android:layout_marginEnd="8sp"
+
+        />
+
+    <ImageButton
+        android:id="@+id/btnLinkedin"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+
+
+        android:src="@drawable/icons8_linkedin"
+        android:background="@color/transparente"
+
+        app:layout_constraintTop_toBottomOf="@id/tvBiografia"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="fitCenter"
+
+        />
+    <ImageButton
+        android:id="@+id/btnGithub"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tvBiografia"
+        app:layout_constraintStart_toEndOf="@+id/btnLinkedin"
+        app:layout_constraintEnd_toStartOf="@id/btnMail"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="100dp"
+
+
+
+        android:src="@drawable/icon_github"
+        android:background="@color/transparente"
+        android:scaleType="fitCenter"
+
+
+
+        />
+    <ImageButton
+        android:id="@+id/btnMail"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tvBiografia"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:src="@drawable/icon_mail"
+        android:background="@color/transparente"
+        android:scaleType="fitCenter"
+
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvApp1"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLinkedin"
+
+        app:cardBackgroundColor="@color/gris_claro">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SALUDO APP"
+                android:gravity="center"
+
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="32sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="24dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp">
+
+                    <TextView
+                        android:id="@+id/tvsaludo_descripcion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        android:textColor="@color/white"
+                        android:text="Esta es una aplicacion en la que tu ingresas tu nombra y te devuelve un saludo."/>
+
+                    <Button
+                        android:id="@+id/btnfirstApp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+
+                        app:layout_constraintTop_toBottomOf="@id/tvsaludo_descripcion"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        android:text="FIRSTAPP"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvApp2"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvApp1"
+
+        app:cardBackgroundColor="@color/gris_claro">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IMC APP"
+                android:gravity="center"
+
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="32sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="24dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp">
+
+                <TextView
+                    android:id="@+id/tvIMC_descripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:textColor="@color/white"
+                    android:text="Una aplicacion que te calcula tu indice de masa corporal mediante los datos introducidos"/>
+
+                <Button
+                    android:id="@+id/btnIMCApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toBottomOf="@id/tvIMC_descripcion"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginTop="4dp"
+
+                    android:text="IMC APP"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnsaludApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/cvApp2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="12dp"
+
+        android:text="SALUDAPP"/>
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

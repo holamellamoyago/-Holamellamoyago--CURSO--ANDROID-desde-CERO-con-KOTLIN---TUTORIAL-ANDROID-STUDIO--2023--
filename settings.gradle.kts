@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CursoKotlinBasico"
+rootProject.name = "CursoKotlinBasico2"
 include(":app")

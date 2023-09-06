@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">CursoKotlinBasico</string>
+    <string name="app_name">holamellamoyagoApp</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
+    <string name="height">Altura</string>
+
 </resources>
